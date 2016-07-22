@@ -1,4 +1,4 @@
-<!<!DOCTYPE>
+<!DOCTYPE>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,9 +8,17 @@
 
     <?php
     $nombre="Juan";
+    $edad=23;
+
+    print "El nombre de usuario es " . $nombre;
+
 
     ?>
+
+    
+
         
+    
         
         
     </body>
