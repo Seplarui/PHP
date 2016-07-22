@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Documento sin título</title>
+        <title>Página 1</title>
     </head>
     <body>
 
@@ -10,7 +10,11 @@
     $nombre="Juan";
     $edad=23;
 
-    print "El nombre de usuario es " . $nombre;
+    print "El nombre de usuario es  $nombre";
+
+    echo "<br/>";
+
+    print "Y su edad es:" . $edad;
 
 
     ?>
