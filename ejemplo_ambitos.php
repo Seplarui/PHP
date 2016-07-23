@@ -10,10 +10,15 @@
     <?php
 
     $nombre="Juan";
-    include("datos_otros.php");
-    dameNombre();
-	
+    function dameNombre() {
+        
+        global $nombre;
+        $nombre="el nombre es " . $nombre;
+        
+    }
 
+    dameNombre();
+    echo $nombre;
 
 ?>
 </body>
