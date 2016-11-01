@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5455fa7-a3a2-437a-bbc8-a8a7876471da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edades.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/array3.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arraymedia.php" afterPath="$PROJECT_DIR$/arraymedia.php" />
     </list>
     <ignored path="PHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,16 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="switch2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/switch2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="while2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/while2.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,11 +104,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edades.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edades.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edades.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="array3.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/array3.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -143,6 +142,7 @@
         <option value="$PROJECT_DIR$/comparastring1.php" />
         <option value="$PROJECT_DIR$/arraymedia.php" />
         <option value="$PROJECT_DIR$/edades.php" />
+        <option value="$PROJECT_DIR$/array3.php" />
       </list>
     </option>
   </component>
@@ -224,12 +224,12 @@
       <workItem from="1477386545922" duration="4440000" />
       <workItem from="1477997469617" duration="1771000" />
       <workItem from="1478000715257" duration="1861000" />
-      <workItem from="1478010770111" duration="1600000" />
+      <workItem from="1478010770111" duration="2344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9672000" />
+    <option name="totallyTimeSpent" value="10416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -498,6 +498,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding />
         </state>
       </provider>
