@@ -9,6 +9,7 @@ if ($nombre=="") {
 
 } else {
     echo "El nombre introducido es: $nombre";
+     echo "<a href=dp2.html>Volver</a>";
 }
 
 
