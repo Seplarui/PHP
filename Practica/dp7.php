@@ -82,11 +82,6 @@ comprobar_cadena_vacia($nombre,$apellidos);
 
 //COMPROBAMOS AFICIONES
 
-if(!isset($varaficiones)) {
-    echo "No tiene ninguna afición.<br>";
-} else {
-    echo "Tiene aficiones, $varaficiones <br>";
-}
 
 //COMPROBAMOS SELECCIÓN ESTADO CIVIL
 
