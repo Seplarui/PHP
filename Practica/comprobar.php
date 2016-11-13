@@ -3,10 +3,6 @@
 echo "<meta charset='utf-8'>";
 error_reporting(0);
 
-echo"<pre>";
-print_r($_REQUEST);
-echo"</pre>";
-
 //COMPROBAR TEXTO
 
 function comprobar_texto($var) {
@@ -23,9 +19,10 @@ return $tmp;
 
 $texto=comprobar_texto('texto');
 $tipo_formato=$_REQUEST['formato'];
-$validar= preg_match("(([A-Z]\d{8})|(\d{8}[A-Z])|([a-z]\d{8})|(\d{8}[a-z]))", $texto);
+$validar_nif= preg_match("(([A-Z]\d{8})|(\d{8}[A-Z])|([a-z]\d{8})|(\d{8}[a-z]))", $texto);
 
 //COMPROBAR SI SE HA RELLENADO EL CAMPO TEXTO
+
 if ($texto=="") {
 	echo "Introduce algún texto por favor.<br>";
 } else {
@@ -45,11 +42,10 @@ if (!isset($_REQUEST['formato']))
 
 if ($tipo_formato=='números' && is_numeric($texto)) {
 
-  echo "Es un número, formato OK.";
+  echo "Es un número, formato OK.<br>";
 
-} else 
+} else if ($tipo_formato=='texto' && is_string($texto))
 
-if ($tipo_formato=='texto' && is_string($texto))
  {
 
     echo "Es texto, formato OK.<br>";
@@ -58,17 +54,16 @@ if ($tipo_formato=='texto' && is_string($texto))
 
     echo "Formato email correcto.<br>";
 
-} else if ($tipo_formato=='nif' && $validar==1) {
+} else if ($tipo_formato=='nif' && $validar_nif==1) {
 
-    echo "Formato dni correcto.";
+    echo "Formato dni correcto.<br>";
 
 } else {
-    echo "Formato incorrecto";
+
+    echo "Formato introducido incorrecto<br>";
 }
 
-/*echo "<br>";
-print_r($validar);
-*/
+
 
 echo "<a href='datos.html'>Volver a la página principal</a>";
 
