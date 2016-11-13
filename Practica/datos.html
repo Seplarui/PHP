@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Datos</title>
+</head>
+<body>
+
+	<form name="comprobacion_datos" method="post" action="comprobar.php">
+		<fieldset>
+			<legend><h1>Comprobación de datos</h1></legend>
+
+
+			<b>Introduce texto: </b><input type="text" name="texto"><br>
+			<input type="radio" name="formato" value="email">Email
+			<input type="radio" name="formato" value="números">Números
+			<input type="radio" name="formato" value="nif">NIF
+			<input type="radio" name="formato" value="texto">Texto
+			<p align="right"><input type="submit" name="boton_enviar">
+				<input type="reset" name="boton_borrar"></p>
+
+
+
+			</fieldset>
+		</form>
+
+	</body>
+	</html>
