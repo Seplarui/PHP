@@ -33,7 +33,7 @@ $apellidos=comprobar('apellidos');
         
     }else {
         echo "Tu nombre es: <b>$nombre</b> <br>";
-        echo "Tus apellidos son:<b>$apellidos</b> <br>";
+        echo "Tus apellidos son: <b>$apellidos</b> <br>";
         echo "<a href=dp3.html>Página Principal</a>";
     }
 

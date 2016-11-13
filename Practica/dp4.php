@@ -5,7 +5,7 @@ echo "<meta charset='utf-8'>";
 if (!isset($_REQUEST['sexo'])) 
 {
 
-    echo "Selecciona una opción por favor"."<br><a href='dp4.html'>Página Principal</a>";
+    echo "Selecciona una opción por favor."."<br><a href='dp4.html'>Página Principal</a>";
     
 } else {
 

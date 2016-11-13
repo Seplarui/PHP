@@ -3,12 +3,6 @@
 error_reporting(0);//OCULTAR NOTIFICACIONES DE ERROR
 echo "<meta charset='utf-8'>";
 
-
-echo "<pre>";
-print_r ($_REQUEST);
-echo "</pre>";
-
-
 function comprobar($var) {
 
     $tmp=(isset($_REQUEST[$var]))
@@ -27,7 +21,6 @@ $peso=comprobar('kg');
 $opcion_edad=$_REQUEST['menu_edad'];
 $varsexo=$_REQUEST['sexo'];
 $varcivil=$_REQUEST['estado_civil'];
-//$varaficiones=$_REQUEST['aficiones'];
 $varcine=$_REQUEST['cine'];
 $varliteratura=$_REQUEST['literatura'];
 $vartebeos=$_REQUEST['tebeos'];
@@ -39,14 +32,11 @@ if(!isset($varcine) && !isset($varliteratura) && !isset($varmusica) && !isset($v
     !isset($vartelevision)   )  {
 
     echo "Elige al menos una afición por favor<br>";
-
-
 }
 
 if ($varcine!="") {
 
     echo "Te gusta el cine.<br>";
-
 }
 
 if ($varliteratura!="") {
@@ -61,7 +51,7 @@ if ($varmusica!="") {
 }
 if ($vartebeos!="") {
 
-    echo "Te gusta los tebeos.<br>";
+    echo "Te gustan los tebeos.<br>";
 
 }
 if ($vardeporte!="") {
@@ -74,14 +64,7 @@ if ($vartelevision!="") {
     echo "Te gusta la televisión.<br>";
 
 }
-
-
-
-
 comprobar_cadena_vacia($nombre,$apellidos);
-
-//COMPROBAMOS AFICIONES
-
 
 //COMPROBAMOS SELECCIÓN ESTADO CIVIL
 
@@ -124,10 +107,10 @@ function comprobar_cadena_vacia($nombreV,$apellidosV) {
     echo "Introduce nombre y apellidos, por favor.<br>";
     
 }  else if ($nombreV==""){
-    echo "Introduce el nombre por favor.";
+    echo "Introduce el nombre por favor.<br>";
     
 }else if ($apellidosV=="") {
-    echo "Introduce los apellidos por favor.";
+    echo "Introduce los apellidos por favor.<br>";
     
 } 
 if ($nombreV!="") 
