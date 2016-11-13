@@ -7,6 +7,8 @@ echo"<pre>";
 print_r($_REQUEST);
 echo"</pre>";
 
+//COMPROBAR TEXTO
+
 function comprobar_texto($var) {
 
     $tmp=(isset($_REQUEST[$var]))
@@ -21,44 +23,53 @@ return $tmp;
 
 $texto=comprobar_texto('texto');
 $tipo_formato=$_REQUEST['formato'];
+$validar= preg_match("(([A-Z]\d{8})|(\d{8}[A-Z])|([a-z]\d{8})|(\d{8}[a-z]))", $texto);
 
+//COMPROBAR SI SE HA RELLENADO EL CAMPO TEXTO
 if ($texto=="") {
 	echo "Introduce algún texto por favor.<br>";
 } else {
 	echo "El texto introducido es: <b>$texto</b>.<br>";
 }
 
+//COMPROBAR OPCIONES DE FORMATO
+
+$tipo_formato=$_REQUEST['formato'];
+
 if (!isset($_REQUEST['formato'])) 
 {
 
     echo "Selecciona una opción por favor."."<br>";
     
+}
+
+if ($tipo_formato=='números' && is_numeric($texto)) {
+
+  echo "Es un número, formato OK.";
+
+} else 
+
+if ($tipo_formato=='texto' && is_string($texto))
+ {
+
+    echo "Es texto, formato OK.<br>";
+
+} else if ($tipo_formato=='email' && filter_var($texto, FILTER_VALIDATE_EMAIL) ==true) {
+
+    echo "Formato email correcto.<br>";
+
+} else if ($tipo_formato=='nif' && $validar==1) {
+
+    echo "Formato dni correcto.";
+
 } else {
-
-    $tipo_formato=$_REQUEST['formato'];
-    //echo "La opción que has seleccionado ha sido <b>$tipo_formato</b>.";
-    if($tipo_formato=="números") {
-	//echo "Has seleccionado números.";
-	if (is_numeric($tipo_formato)) {
-		echo "El formato número no es correcto.<br>";
-	} else {
-		echo "El formato número es correcto.<br>";
-	}
+    echo "Formato incorrecto";
 }
 
-
-}
-
-
-
+/*echo "<br>";
+print_r($validar);
+*/
 
 echo "<a href='datos.html'>Volver a la página principal</a>";
-
-
-
-
-
-
-
 
 ?>
