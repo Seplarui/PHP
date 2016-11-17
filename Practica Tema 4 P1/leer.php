@@ -6,11 +6,5 @@ while(!feof($fich)) { //hasta que no llegue al ifn del fichero voy a leer cada l
 }
 fclose($fich);//una vez que acabo con el fichero, lo cierro.
 
-
-
-
-
-
-
 ?>
 
