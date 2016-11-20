@@ -1,20 +1,28 @@
 <pre> 
 <?php
-$archivo = fopen("kk.txt", "r");
-$tamano = filesize("kk.txt");
-$texto = fread($archivo, $tamano);
-//echo $texto;
+//EVITAMOS QUE MUESTRE POR PANTALLA LOS WARNING Y NOTICE.
+error_reporting(0);
+//COMPROBAMOS SI EXISTE EL FICHERO.
+if (fopen("counter.txt","r")) {
+    echo "<b>El archivo counter.txt existe y ha quedado abierto.</b>";
+} else
+{
+    echo "<b>El archivo counter.txt no existe y lo creamos.</b>";
+}
+//ABRIMOS EL FICHERO Y LO LEEMOS
+$archivo = fopen("counter.txt", "r");
+$tamano = filesize("counter.txt");
+$contador = fread($archivo, $tamano);
 echo "<br>";
-//$texto=$texto+1;
-$texto=$texto+1;
-//fwrite($archivo,$texto);
+//COGEMOS EL CONTADOR DEL FICHERO Y LE SUMAMOS 1
+$contador=$contador+1;
 
-
-$escribir_archivo=fopen("kk.txt","wa");
-fwrite($escribir_archivo,$texto);
+//ESCRIBIMOS EL NUEVO VALOR DEL CONTADOR EN EL FICHERO
+$escribir_archivo=fopen("counter.txt","wa");
+fwrite($escribir_archivo,$contador);
 fclose($archivo);
 
-echo "Texto sumado $texto";
+echo "Contador: $contador";
 
 ?>
 </pre>
