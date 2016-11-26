@@ -1,11 +1,4 @@
-
-() escrito el  26-11-2016
-
-() escrito el  26-11-2016
-
-aa(aa) escrito el  26-11-2016
-aa
-Sebas(Sebas) escrito el  26-11-2016
-Sebas
-kk<b>(kk)</b> escrito el  26-11-2016
-kk
+Nombre 1(correo1@correo.es) escrito el  26-11-2016
+Comentario 1
+Nombre2(correo2@correo.es) escrito el  26-11-2016
+Comentario 2
