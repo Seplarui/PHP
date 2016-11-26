@@ -48,7 +48,7 @@ if(is_uploaded_file($_FILES['imagen']['tmp_name'])) {
 
  }
 }
-
+echo "<a href='prueba1.html'>Volver a subir un fichero</a>";
 
 
 //COMPROBACIÓN DE VARIABLES
@@ -64,5 +64,6 @@ print_r($tamano_fichero);
 echo "Nombre de fichero <br>";
 print_r($_FILES['imagen']['name']);
 echo "</pre>";
+
 
 ?>
