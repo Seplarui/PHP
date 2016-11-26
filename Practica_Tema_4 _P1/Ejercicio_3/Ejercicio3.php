@@ -27,5 +27,22 @@
 
 </form>
 
+<?php
+
+//LEEMOS EL FICHERO
+
+$fichero=fopen("comentarios.txt","r");
+$tamanyo=filesize("comentarios.txt");
+while (!feof($fichero)) {
+	echo fgets($fichero)."<br>";
+}
+
+fclose($fichero);
+
+
+
+?>
+
 </body>
 </html>
+
