@@ -12,12 +12,15 @@ if (fopen("comentarios.txt","a")) {
 {
     echo "<b>El archivo comentarios.txt no existe y lo creamos.</b>";
 }
-//$escribir_correo='fwrite($escribir_fichero,$correo."\\t")';
 
-$fecha=date('h-i-s');
+
+rewind($escribir_fichero);
+$fecha=date('d-m-Y');
 fwrite($escribir_fichero,$nombre."($correo) escrito el  $fecha"."\r\n");
 
 fwrite($escribir_fichero,$comentario."\r\n");
+
+
 fclose($fichero);
 //." "." "
 //MOSTRAR DATOS EN PANTALLA PRUEBAS
