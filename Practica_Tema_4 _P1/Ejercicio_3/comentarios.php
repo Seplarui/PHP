@@ -1,6 +1,5 @@
 <?php
 error_reporting(0);
-//ini_set('display_errors', '1');
 
 $nombre=$_REQUEST['nombre'];
 $correo=$_REQUEST['email'];
@@ -8,7 +7,7 @@ $comentario=$_REQUEST['comentario'];
 $fichero="comentarios.txt";
 $escribir_fichero=fopen("comentarios.txt","a");
 //CREAMOS EL FICHERO
-if (fopen($escribir_fichero)) {
+if ($escribir_fichero) {
     echo "<b>El archivo comentarios.txt existe y ha quedado abierto.</b>";
 } else
 {
