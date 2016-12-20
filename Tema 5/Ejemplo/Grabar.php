@@ -1,54 +1,47 @@
 <html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-</head>
-<body>
-<?php
-	error_reporting(E_ALL);
-	ini_set('display_errors','1');
-	include_once("Profesor.php");
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        error_reporting(E_ALL);
+        ini_set('display_errors', '1');
 
-	function recoge($campo) {
+        include_once("Profesor.php");
 
-		if(isset($_REQUEST[$campo])) {
+        function recoge($campo) {
+            if (isset($_REQUEST[$campo])) {
+                $valor = htmlspecialchars(trim(strip_tags($_REQUEST[$campo])));
+            } else {
+                $valor = "";
+            };
+            return $valor;
+        }
 
-			$valor=htmlspecialchars(trim(strip_tags($_REQUEST[$campo])));
+        function grabar($profesor) {
+            $f = fopen("poo.txt", "a");
+            $linea = $profesor->getId() . ";" . $profesor->getNombre() . "\r\n";
+            fwrite($f, $linea);
 
-		} else {
+            fclose($f);
+        }
 
-			$valor="";
+        function leer() {
+            $id = recoge("id");
+            $nombre = recoge("nombre");
+            $profe = new Profesor($id, $nombre);
+            return $profe;
+        }
 
-
-		}
-		return $valor;
-	}
-
-	function grabar($profesor) {
-
-
-		$f=fopen("poo.txt","a");
-		$linea=$profesor->getId(). ";".$profesor->getNombre()."\r\n";
-		fwrite($f,$linea);
-		echo "Grabado: ". $profesor->getNombre(). "<br>";
-		fclose($f);
-
-	}
-
-	function leer() {
-
-		$id=recoge("id");
-		$nombre=recoge("nombre");
-		$profe=recoge("profesor");
-		return $profe;
-	}
-
-	$profesor=new Profesor("","");
-	$profesor=leer();
-	grabar($profesor);
-	?>
-
-	</body>
-	</html>
-
-
+        $profesor = new Profesor("", "");
+        $profesor = leer();
+        if ($profesor->getId() != "" && $profesor->getNombre() != "") {
+            grabar($profesor);
+            echo "Grabado: " . $profesor->getNombre() . "<br>";
+        } else {
+            echo "Error: Campos vacios" . "<br>";
+        }
+        ?>
+    </body>
+</html>
