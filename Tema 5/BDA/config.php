@@ -10,4 +10,7 @@ class Config {
 	static public $tema="Tema 6. Mysql";
 	static public $bdhostname="localhost";
 	static public $bdnombre="pacoaldarias";
+	static public $bdusuario="alumno";
+	static public $bdclave="alumno";
 }
+?>
