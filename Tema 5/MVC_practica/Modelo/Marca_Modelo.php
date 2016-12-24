@@ -15,6 +15,9 @@ class Marcas_modelo {
 
 	public function setId($id_marca) {
 
+		$fopen("../marcas_coches.txt","a");
+		
+
 		$this->_id_marca=$id_marca;
 
 	}
